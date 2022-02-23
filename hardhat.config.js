@@ -3,8 +3,6 @@ const fs =require('fs');
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 
-var privateKey = fs.readFileSync('./.secret').toString();
-privateKey = privateKey.replace('\n', '');
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -47,12 +45,16 @@ module.exports = {
     },
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/3c8e7f53bc6442a1876c4dc03e0a1f32",
-      accounts: [privateKey],
+      accounts: ["d153ffce0a849c5039c03192204898b526c0a79f9f57a7b15c28e5704e918a1a"],
     },
     ganache: {
       url: "HTTP://127.0.0.1:7545",
       accounts: ["d153ffce0a849c5039c03192204898b526c0a79f9f57a7b15c28e5704e918a1a"],
     },
+    local: {
+      url: "HTTP://127.0.0.1:8545",
+      accounts: ["0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"],
+    }
     
   }
 };

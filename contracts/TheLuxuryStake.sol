@@ -273,9 +273,9 @@ contract TheLuxuryStake is Ownable {
     }
 
     // getUserStakes will return all stakes for a user
-    function getUserStakes() public view returns(Stake[] memory) {
+    function getUserStakes(address user) public view returns(Stake[] memory) {
         // Grab user_index which is the index to use to grab the Stake[]
-        uint256 user_index = stakes[msg.sender];
+        uint256 user_index = stakes[user];
         // identify the stake by stake index
         Stake[] memory user_stakes = new Stake[](stakeholders[user_index].address_stakes.length);
         for (uint i=0 ; i < stakeholders[user_index].address_stakes.length; i++) {
