@@ -30,6 +30,14 @@ module.exports = {
         version: "0.7.0",
         settings: {},
       },
+      {
+        version: "0.4.23",
+        settings: {},
+      },
+      {
+        version: "0.5.0",
+        settings: {},
+      },
     ],
   },
  
@@ -40,6 +48,10 @@ module.exports = {
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/3c8e7f53bc6442a1876c4dc03e0a1f32",
       accounts: [privateKey],
+    },
+    ganache: {
+      url: "HTTP://127.0.0.1:7545",
+      accounts: ["d153ffce0a849c5039c03192204898b526c0a79f9f57a7b15c28e5704e918a1a"],
     },
     
   }
