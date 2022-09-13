@@ -301,5 +301,3 @@ contract TheLuxuryStake is Ownable {
     }
 
 }
-
-// label puppy turn honey bounce fox roof boss feed outdoor umbrella van
